@@ -6,17 +6,22 @@ Algoritmo "saldo"
 // Data atual  : 07/06/2020
 Var
 // Seção de Declarações das variáveis 
-saque, result: real
-saldo: inteiro
+saque, saldoatual, saldofinal, sobra: real
+positivo, negativo: inteiro
 
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc...
-saldo<- 1500
+saldo<- 25000
 escreval("Qual o valor a ser realizado para o saque?")
 leia(saque)
 
-result<- saldo-saque
+saldofinal<- saldoatual-saque
 
-escreval("O saldo restante é igual a:",result)
+positivo<-(saldofinal>=0)
+negativo<- (saldofinal<0)
+sobra<- saldofinal
+escreval("Seu saldo final é positivo?",positivo)
+escreval("Seu saldo final é negativo?",negativo)
+escreval("Depois do saque restará: R$",sobra,"na sua conta")
 
 Fimalgoritmo
